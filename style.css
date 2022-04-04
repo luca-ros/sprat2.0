@@ -2,6 +2,8 @@
     --primary: #8c38ff;
     --light: #eeeeee;
     --dark: #212121;
+    --hero-text:rgb(35, 215, 228);
+    --h2-text: rgb(218, 28, 117);
     --gradient-logo: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
 }
 
@@ -11,8 +13,9 @@
     padding: 0;
 }
 
-body {
-background-color: lightblue;
+.container {
+    background: linear-gradient(188deg, rgba(60, 5, 137, 1) 0%, rgba(0, 135, 212, 1) 50%, rgba(180, 74, 180, 1) 96%);
+    height: 85vh;
 }
 
 .container {
@@ -29,6 +32,10 @@ nav {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+
+
     background: var(--gradient-logo);
     background-clip: text;
     -webkit-background-clip: text;
@@ -50,7 +57,7 @@ nav {
     text-decoration: none;
     text-decoration: none;
 
-    margin: 0 16px;
+    margin: 7px 16px;
     font-weight: 500;
     transition: 0.4s;
     padding: 8px 16px;
@@ -59,4 +66,40 @@ nav {
 
 .menu a:hover {
     background-color: var(--primary);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 2 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 20px;
+}
+
+.block-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+color: var(--hero-text);
+font-weight: bolder;
+font-size: xx-large;
+}
+
+h2 {
+    background-color: var(--gradient-logo);
+
+}
+
+.hero p {
+    color: #f49867;
+    padding: 1rem;
+    
+}
+
+.block-rigth {
+    display: flex;
+    grid-area: 1 / 2 / 2 / 3;
+    margin-right: 10px;
 }
